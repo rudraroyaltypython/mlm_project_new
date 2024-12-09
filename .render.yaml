@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: django-app
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    buildCommand: ""  # Empty because Dockerfile handles the build
+    startCommand: ""  # Empty because Dockerfile handles the start process
+
+envVars:
+  - key: DJANGO_SECRET_KEY
+    value: bVRTq8k-XYoS2pjjqK0GiyqU3lPRtiuQACBYayNlFsgsSAIdT_8uIUSpV4gLIVYHjf0
+  - key: DB_NAME
+    value: postgres  # Name of the database, rendered by Render
+  - key: DB_USER
+    value: your-database-user  # Your PostgreSQL username
+  - key: DB_PASSWORD
+    value: your-database-password  # Your PostgreSQL password
+  - key: DB_HOST
+    value: your-database-host  # Render will provide this host automatically
+  - key: DB_PORT
+    value: 5432  # Default PostgreSQL port
+
+databases:
+  - type: postgres
+    name: postgres
+    plan: free
