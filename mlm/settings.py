@@ -84,9 +84,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('mlmDB'),
-        'USER': os.getenv('mlmdb_user'),
+        'USER': os.getenv('mlmdb_p9ze_user'),
         'PASSWORD': os.getenv('VJvixTMuX8mHZNWz5NzIIXMHRsVOiLwq'),
-        'HOST': os.getenv('dpg-ctb9s49opnds73ell44g-a'),
+        'HOST': os.getenv('dpg-ctbtgilumphs73asql3g-a'),
         'PORT': os.getenv('5432'),
     }
 }
